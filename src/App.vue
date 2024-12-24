@@ -6,7 +6,6 @@ import Testimonials from "./components/Testimonials.vue";
 import Apointment from "./components/Apointment.vue";
 import Contact from "./components/Contact.vue";
 import Service from "./components/Service.vue";
-import Test from "./components/Test.vue";
 </script>
 
 <template>
