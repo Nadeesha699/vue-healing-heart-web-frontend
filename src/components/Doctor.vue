@@ -6,7 +6,7 @@ import Avatar04 from '@/assets/images/2151107363.jpg'
 </script>
 
 <template>
-    <div class="doctor-container">
+    <div class="doctor-container" id="doctor">
       <label class="animal-txt-1">Our specialized</label>
       <div class="doctor-div-1">
         <div class="doctor-card">

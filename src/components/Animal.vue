@@ -1,9 +1,23 @@
 <script setup>
 import Icon from "@/assets/images/arrow-circle-right.png";
+
+import { useMotions } from '@vueuse/motion'
+
+const { smoothestDiv } = useMotions()
+
+smoothestDiv.apply({ scale: 4 })
 </script>
 
 <template>
-  <div class="animal-container">
+  <div class="animal-container"  v-motion="'smoothestDiv'"
+    :initial="{
+      opacity: 0,
+      y: 100,
+    }"
+    :enter="{
+      opacity: 1,
+      y: 0,
+    }">
     <label class="animal-txt-1">What's your pet ?</label>
     <div class="animal-div-1">
       <div class="animal-div-2">

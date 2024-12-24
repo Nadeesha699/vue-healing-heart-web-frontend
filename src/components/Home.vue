@@ -13,10 +13,10 @@ import Logo from "@/assets/images/heartworm.png";
             <h1 class="home-txt-4">Healing Hearts</h1>
           </div>
           <div class="home-div-7">
-            <a href="" class="home-a-1">About</a>
-            <a href="" class="home-a-1">Service</a>
-            <a href="" class="home-a-1">Testimonials</a>
-            <a href="" class="home-a-1">Doctors</a>
+            <a href="/" class="home-a-1">About</a>
+            <a href="#service" class="home-a-1">Service</a>
+            <a href="#testimonials" class="home-a-1">Testimonials</a>
+            <a href="#doctor" class="home-a-1">Doctors</a>
           </div>
         </div>
         <label class="home-txt-3">+94 711764232</label>

@@ -9,8 +9,8 @@
 body {
  background-image: url(../src/assets/images/background.jpg);
  background-size: cover;
- background-repeat: no-repeat; /* Prevent the image from repeating */
- background-position: center; /* Center the image */
+ background-repeat: no-repeat; 
+ background-position: center; 
  height: 100Vh;
  background-attachment: fixed;
 }

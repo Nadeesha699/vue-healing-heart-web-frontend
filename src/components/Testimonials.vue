@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <div class="testimonials-container">
+  <div class="testimonials-container" id="testimonials">
     <label class="animal-txt-1">Testimonials</label>
     <div class="testimonials-div-1">
       <div class="testimonials-card">
