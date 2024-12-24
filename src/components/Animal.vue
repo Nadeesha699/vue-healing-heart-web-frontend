@@ -1,23 +1,9 @@
 <script setup>
 import Icon from "@/assets/images/arrow-circle-right.png";
-
-import { useMotions } from '@vueuse/motion'
-
-const { smoothestDiv } = useMotions()
-
-smoothestDiv.apply({ scale: 4 })
 </script>
 
 <template>
-  <div class="animal-container"  v-motion="'smoothestDiv'"
-    :initial="{
-      opacity: 0,
-      y: 100,
-    }"
-    :enter="{
-      opacity: 1,
-      y: 0,
-    }">
+  <div class="animal-container">
     <label class="animal-txt-1">What's your pet ?</label>
     <div class="animal-div-1">
       <div class="animal-div-2">
@@ -78,12 +64,12 @@ smoothestDiv.apply({ scale: 4 })
   height: 86%;
   padding: 2%;
   column-gap: 2%;
-  row-gap:6%
+  row-gap: 6%;
 }
 
 .animal-div-2 {
   background-image: url(../assets/images/2150797206.jpg);
-  background-position:top;
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -97,7 +83,7 @@ smoothestDiv.apply({ scale: 4 })
 
 .animal-div-3 {
   background-image: url(../assets/images/cute-halloween-3d-cat.jpg);
-  background-position:center;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -111,7 +97,7 @@ smoothestDiv.apply({ scale: 4 })
 
 .animal-div-4 {
   background-image: url(../assets/images/233988850_11111682.jpg);
-  background-position:center;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -136,7 +122,7 @@ smoothestDiv.apply({ scale: 4 })
 .animal-div-6 {
   width: 49%;
   background-image: url(../assets/images/2151002249.jpg);
-  background-position:top;
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 30px;
@@ -149,7 +135,7 @@ smoothestDiv.apply({ scale: 4 })
 .animal-div-7 {
   width: 49%;
   background-image: url(../assets/images/151099632_10473850.jpg);
-  background-position:top;
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 30px;
@@ -164,4 +150,3 @@ smoothestDiv.apply({ scale: 4 })
   height: 25px;
 }
 </style>
- 
