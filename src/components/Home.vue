@@ -1,6 +1,6 @@
 <script setup>
 import Icon from "@/assets/images/arrow-circle-right.png";
-import Logo from "@/assets/images/Health.png";
+import Logo from "@/assets/images/heartworm.png";
 </script>
 
 <template>
@@ -163,7 +163,6 @@ import Logo from "@/assets/images/Health.png";
 .home-img-2 {
   width: 50px;
   height: 50px;
-  border-radius: 50px;
 }
 
 .home-div-6 {

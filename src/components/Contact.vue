@@ -1,0 +1,10 @@
+<template>
+  <div>
+    <div></div>
+    <div></div>
+    <div>
+      <label></label>
+      <div><label></label><label></label></div>
+    </div>
+  </div>
+</template>

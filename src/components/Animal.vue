@@ -1,51 +1,35 @@
+<script setup>
+import Icon from "@/assets/images/arrow-circle-right.png";
+</script>
+
 <template>
-    <div class="animal-container">
-      <label class="animal-txt-1">What's your pet ?</label>
-      <div class="animal-div-1">
-        <div class="animal-div-2">
-          <label class="animal-txt-2">Dog</label>
-          <img
-            alt="icon"
-            src="../images/arrow-circle-right.png"
-            class="home-img-1"
-          />
+  <div class="animal-container">
+    <label class="animal-txt-1">What's your pet ?</label>
+    <div class="animal-div-1">
+      <div class="animal-div-2">
+        <label class="animal-txt-2">Dog</label>
+        <img alt="icon" :src="Icon" class="home-img-1" />
+      </div>
+      <div class="animal-div-3">
+        <label class="animal-txt-2">Cat</label>
+        <img alt="icon" :src="Icon" class="home-img-1" />
+      </div>
+      <div class="animal-div-4">
+        <label class="animal-txt-2">Rabbit</label>
+        <img alt="icon" :src="Icon" class="home-img-1" />
+      </div>
+      <div class="animal-div-5">
+        <div class="animal-div-6">
+          <label class="animal-txt-2">Bird</label>
+          <img alt="icon" :src="Icon" class="home-img-1" />
         </div>
-        <div class="animal-div-3">
-          <label class="animal-txt-2">Cat</label>
-          <img
-            alt="icon"
-            src="../images/arrow-circle-right.png"
-            class="home-img-1"
-          />
-        </div>
-        <div class="animal-div-4">
-          <label class="animal-txt-2">Rabbit</label>
-          <img
-            alt="icon"
-            src="../images/arrow-circle-right.png"
-            class="home-img-1"
-          />
-        </div>
-        <div class="animal-div-5">
-          <div class="animal-div-6">
-            <label class="animal-txt-2">Bird</label>
-            <img
-              alt="icon"
-              src="../images/arrow-circle-right.png"
-              class="home-img-1"
-            />
-          </div>
-          <div class="animal-div-7">
-            <label class="animal-txt-2">Rodent</label>
-            <img
-              alt="icon"
-              src="../images/arrow-circle-right.png"
-              class="home-img-1"
-            />
-          </div>
+        <div class="animal-div-7">
+          <label class="animal-txt-2">Rodent</label>
+          <img alt="icon" :src="Icon" class="home-img-1" />
         </div>
       </div>
     </div>
+  </div>
 </template>
 
 <style scoped>
@@ -80,39 +64,49 @@
   height: 86%;
   padding: 2%;
   column-gap: 2%;
+  row-gap:6%
 }
 
 .animal-div-2 {
-  background-color: rgb(83, 83, 255);
-  width: 80%;
-  height: 160px;
+  background-image: url(../assets/images/2150797206.jpg);
+  background-position:top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 290px;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 10%;
+  padding: 5%;
 }
 
 .animal-div-3 {
-  background-color: rgb(255, 166, 58);
-  width: 80%;
-  height: 160px;
+  background-image: url(../assets/images/cute-halloween-3d-cat.jpg);
+  background-position:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 290px;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 10%;
+  padding: 5%;
 }
 
 .animal-div-4 {
-  background-color: rgb(255, 83, 229);
-  width: 80%;
-  height: 160px;
+  background-image: url(../assets/images/233988850_11111682.jpg);
+  background-position:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 290px;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 10%;
+  padding: 5%;
 }
 
 .animal-div-5 {
@@ -127,9 +121,12 @@
 
 .animal-div-6 {
   width: 49%;
-  background-color: yellow;
+  background-image: url(../assets/images/2151002249.jpg);
+  background-position:top;
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 30px;
-  padding: 10%;
+  padding: 5%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -137,11 +134,20 @@
 
 .animal-div-7 {
   width: 49%;
-  background-color: rgb(0, 174, 255);
+  background-image: url(../assets/images/151099632_10473850.jpg);
+  background-position:top;
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 30px;
-  padding: 10%;
+  padding: 5%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+
+.home-img-1 {
+  width: 25px;
+  height: 25px;
+}
 </style>
+ 
