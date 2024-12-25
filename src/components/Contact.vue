@@ -3,11 +3,14 @@ import Logo from "@/assets/images/heartworm.png";
 import Contact01 from "@/assets/images/phone.png";
 import Contact02 from "@/assets/images/mail.png";
 import Contact03 from "@/assets/images/location-pin.png";
+
 import { onMounted } from "vue";
 import { observeElements } from "@/js/intersectionObserver";
+
 onMounted(() => {
   observeElements();
 });
+
 </script>
 
 <template>

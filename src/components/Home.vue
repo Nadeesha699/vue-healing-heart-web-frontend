@@ -1,6 +1,7 @@
 <script setup>
 import Icon from "@/assets/images/arrow-circle-right.png";
 import Logo from "@/assets/images/heartworm.png";
+
 import { onMounted } from "vue";
 onMounted(() => {
   const elements = document.querySelectorAll(".test");
@@ -18,6 +19,7 @@ onMounted(() => {
   );
   elements.forEach((el) => observer.observe(el));
 });
+
 </script>
 
 <template>

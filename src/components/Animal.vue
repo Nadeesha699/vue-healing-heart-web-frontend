@@ -1,7 +1,10 @@
 <script setup>
 import Icon from "@/assets/images/arrow-circle-right.png";
+import Animal01 from '@/assets/images/2150797206.jpg'
+
 import { onMounted } from "vue";
 import {observeElements} from '@/js/intersectionObserver.js'
+
 onMounted(() => {
   observeElements();
 });
@@ -11,7 +14,7 @@ onMounted(() => {
   <div class="animal-container">
     <label class="animal-txt-1 test">What's your pet ?</label>
     <div class="animal-div-1">
-      <div class="animal-div-2 test">
+      <div class="animal-div-2 test"  >
         <label class="animal-txt-2 test">Dog</label>
         <img alt="icon" :src="Icon" class="home-img-1" />
       </div>

@@ -2,11 +2,14 @@
 import Avatar01 from "@/assets/images/3d-cartoon-style-character.jpg";
 import Avatar02 from "@/assets/images/40523.jpg";
 import Avatar03 from "@/assets/images/2151100226.jpg";
+
 import { onMounted } from "vue";
 import { observeElements } from "@/js/intersectionObserver.js";
+
 onMounted(() => {
   observeElements();
 });
+
 </script>
 
 <template>

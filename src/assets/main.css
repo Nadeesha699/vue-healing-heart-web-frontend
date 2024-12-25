@@ -909,7 +909,7 @@ transform: translateX(0);
   row-gap: 6%;
 }
 
-.animal-div-2, .animal-div-3, .animal-div-4{
+.animal-div-2,.animal-div-3, .animal-div-4{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -926,6 +926,7 @@ transform: translateX(0);
 }
 
 .animal-div-2 {
+  background-position:top;
   background-image: url(../assets/images/2150797206.jpg);
 }
 

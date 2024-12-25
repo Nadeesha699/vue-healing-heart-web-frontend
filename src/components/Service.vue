@@ -1,7 +1,10 @@
 <script setup>
 import PinOut from "@/assets/images/pin.png";
 import PinIn from "@/assets/images/pin1.png";
+
 import { ref } from "vue";
+import { onMounted } from "vue";
+import { observeElements } from "@/js/intersectionObserver.js";
 
 const changePostion01 = ref(false);
 const changePostion02 = ref(false);
@@ -59,11 +62,10 @@ function clickPin(value) {
   }
 }
 
-import { onMounted } from "vue";
-import { observeElements } from "@/js/intersectionObserver.js";
 onMounted(() => {
   observeElements();
 });
+
 </script>
 
 <template>

@@ -6,11 +6,14 @@ import Animal04 from "@/assets/images/cockatoo.png";
 import Animal05 from "@/assets/images/rat.png";
 import Animal06 from "@/assets/images/cow.png";
 import Add from "@/assets/images/add.png";
+
 import { onMounted } from "vue";
 import { observeElements } from "@/js/intersectionObserver";
+
 onMounted(() => {
   observeElements();
 });
+
 </script>
 
 <template>
