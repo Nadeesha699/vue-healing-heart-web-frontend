@@ -58,13 +58,19 @@ function clickPin(value) {
     }
   }
 }
+
+import { onMounted } from "vue";
+import { observeElements } from "@/js/intersectionObserver.js";
+onMounted(() => {
+  observeElements();
+});
 </script>
 
 <template>
   <div class="service-container" id="service">
-    <label class="appointment-txt-1">OUR SERVICES</label>
+    <label class="appointment-txt-1 test">OUR SERVICES</label>
     <div
-      class="service-div-1"
+      class="service-div-1 test"
       :class="{ 'service-div-1-pin': changePostion01 }"
     >
       <label class="service-txt-1">01</label>
@@ -112,7 +118,7 @@ function clickPin(value) {
       />
     </div>
     <div
-      class="service-div-2"
+      class="service-div-2 test"
       :class="{ 'service-div-2-pin': changePostion02 }"
     >
       <label class="service-txt-1">02</label>
@@ -139,7 +145,7 @@ function clickPin(value) {
       />
     </div>
     <div
-      class="service-div-3"
+      class="service-div-3 test"
       :class="{ 'service-div-3-pin': changePostion03 }"
     >
       <label class="service-txt-1">03</label>
@@ -166,7 +172,7 @@ function clickPin(value) {
       />
     </div>
     <div
-      class="service-div-4"
+      class="service-div-4 test"
       :class="{ 'service-div-4-pin': changePostion04 }"
     >
       <label class="service-txt-1">04</label>
@@ -193,7 +199,7 @@ function clickPin(value) {
       />
     </div>
     <div
-      class="service-div-5"
+      class="service-div-5 test"
       :class="{ 'service-div-5-pin': changePostion05 }"
     >
       <label class="service-txt-1">05</label>
@@ -220,7 +226,7 @@ function clickPin(value) {
       />
     </div>
     <div
-      class="service-div-6"
+      class="service-div-6 test"
       :class="{ 'service-div-6-pin': changePostion06 }"
     >
       <label class="service-txt-1">06</label>
@@ -247,7 +253,7 @@ function clickPin(value) {
       />
     </div>
     <div
-      class="service-div-7"
+      class="service-div-7 test"
       :class="{ 'service-div-7-pin': changePostion07 }"
     >
       <label class="service-txt-1">07</label>
@@ -273,7 +279,7 @@ function clickPin(value) {
         @click="clickPin(7)"
       />
     </div>
-    <div class="service-div-8">
+    <div class="service-div-8 test">
       <label class="service-txt-1">08</label>
       <div class="service-div-1-1">
         <label>Oncology</label>
@@ -330,6 +336,20 @@ function clickPin(value) {
   gap: 50px;
   transition: all 1s ease-in-out;
   cursor: pointer;
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.service-div-1.yes,
+.service-div-2.yes,
+.service-div-3.yes,
+.service-div-4.yes,
+.service-div-5.yes,
+.service-div-6.yes,
+.service-div-7.yes,
+.service-div-8.yes {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .service-div-1 {
@@ -442,6 +462,14 @@ function clickPin(value) {
   font-size: 30px;
   text-transform: uppercase;
   padding-left: 2%;
+  transition: all 1.4s ease-in-out;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.appointment-txt-1.yes {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .service-div-1-pin {

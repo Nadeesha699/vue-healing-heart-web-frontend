@@ -1,20 +1,21 @@
 <script setup>
-  import Avatar01 from '@/assets/images/3d-cartoon-style-character.jpg'
-  import Avatar02 from '@/assets/images/40523.jpg'
-  import Avatar03 from '@/assets/images/2151100226.jpg'
+import Avatar01 from "@/assets/images/3d-cartoon-style-character.jpg";
+import Avatar02 from "@/assets/images/40523.jpg";
+import Avatar03 from "@/assets/images/2151100226.jpg";
+import { onMounted } from "vue";
+import { observeElements } from "@/js/intersectionObserver.js";
+onMounted(() => {
+  observeElements();
+});
 </script>
 
 <template>
   <div class="testimonials-container" id="testimonials">
-    <label class="animal-txt-1">Testimonials</label>
-    <div class="testimonials-div-1">
+    <label class="testimonials-txt-3 test">Testimonials</label>
+    <div class="testimonials-div-1 test">
       <div class="testimonials-card">
         <div class="testimonials-div-2">
-          <img
-            alt="icon"
-            :src="Avatar01"
-            class="testimonials-img"
-          />
+          <img alt="icon" :src="Avatar01" class="testimonials-img" />
           <label class="testimonials-txt-1">Nadeesha Ruwandima</label>
         </div>
         <p class="testimonials-p">
@@ -29,11 +30,7 @@
       </div>
       <div class="testimonials-card">
         <div class="testimonials-div-2">
-          <img
-            alt="icon"
-            :src="Avatar02"
-            class="testimonials-img"
-          />
+          <img alt="icon" :src="Avatar02" class="testimonials-img" />
           <label class="testimonials-txt-1">Nadeesha Ruwandima</label>
         </div>
         <p class="testimonials-p">
@@ -48,11 +45,7 @@
       </div>
       <div class="testimonials-card">
         <div class="testimonials-div-2">
-          <img
-            alt="icon"
-           :src="Avatar03"
-            class="testimonials-img"
-          />
+          <img alt="icon" :src="Avatar03" class="testimonials-img" />
           <label class="testimonials-txt-1">Nadeesha Ruwandima</label>
         </div>
         <p class="testimonials-p">
@@ -86,6 +79,14 @@
   align-items: center;
   width: 100%;
   padding-bottom: 2%;
+  opacity: 0;
+  transform: translateX(-200px);
+  transition: all 1s ease-in-out;
+}
+
+.testimonials-div-1.yes {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .testimonials-card {
@@ -134,7 +135,7 @@
   justify-content: flex-end;
 }
 
-.animal-txt-1 {
+.testimonials-txt-3 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: rgb(0, 0, 0);
   font-weight: bold;
@@ -142,5 +143,13 @@
   font-size: 30px;
   text-transform: uppercase;
   padding-left: 2%;
+  opacity: 0;
+  transform: translateX(200px);
+  transition: all 1s ease-in-out;
+}
+
+.testimonials-txt-3.yes{
+  opacity: 1;
+  transform: translateX(0);
 }
 </style>

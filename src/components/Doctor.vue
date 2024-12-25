@@ -1,36 +1,41 @@
 <script setup>
-import Avatar01 from '@/assets/images/2150797606.jpg'
-import Avatar02 from '@/assets/images/portrait-3d-male-doctor.jpg'
-import Avatar03 from '@/assets/images/2151107332.jpg'
-import Avatar04 from '@/assets/images/2151107363.jpg'
+import Avatar01 from "@/assets/images/2150797606.jpg";
+import Avatar02 from "@/assets/images/portrait-3d-male-doctor.jpg";
+import Avatar03 from "@/assets/images/2151107332.jpg";
+import Avatar04 from "@/assets/images/2151107363.jpg";
+import { onMounted } from "vue";
+import { observeElements } from "@/js/intersectionObserver.js";
+onMounted(() => {
+  observeElements();
+});
 </script>
 
 <template>
-    <div class="doctor-container" id="doctor">
-      <label class="animal-txt-1">Our specialized</label>
-      <div class="doctor-div-1">
-        <div class="doctor-card">
-          <img alt="icon" :src='Avatar01' />
-          <label class="doctor-txt-1">Kamal Weera</label>
-          <label class="doctor-txt-2">Surgeon</label>
-        </div>
-        <div class="doctor-card">
-          <img alt="icon" :src='Avatar02' />
-          <label class="doctor-txt-1">Amal Singha</label>
-          <label class="doctor-txt-2">Therapist</label>
-        </div>
-        <div class="doctor-card">
-          <img alt="icon" :src='Avatar03' />
-          <label class="doctor-txt-1">Bimal Kodi</label>
-          <label class="doctor-txt-2">Dentist</label>
-        </div>
-        <div class="doctor-card">
-          <img alt="icon" :src='Avatar04' />
-          <label class="doctor-txt-1">Susuil jaye</label>
-          <label class="doctor-txt-2">Zoopsychologhist</label>
-        </div>
+  <div class="doctor-container" id="doctor">
+    <label class="doctor-txt-3 test">Our specialized</label>
+    <div class="doctor-div-1">
+      <div class="doctor-card test">
+        <img alt="icon" :src="Avatar01" />
+        <label class="doctor-txt-1">Kamal Weera</label>
+        <label class="doctor-txt-2">Surgeon</label>
+      </div>
+      <div class="doctor-card test">
+        <img alt="icon" :src="Avatar02" />
+        <label class="doctor-txt-1">Amal Singha</label>
+        <label class="doctor-txt-2">Therapist</label>
+      </div>
+      <div class="doctor-card test">
+        <img alt="icon" :src="Avatar03" />
+        <label class="doctor-txt-1">Bimal Kodi</label>
+        <label class="doctor-txt-2">Dentist</label>
+      </div>
+      <div class="doctor-card test">
+        <img alt="icon" :src="Avatar04" />
+        <label class="doctor-txt-1">Susuil jaye</label>
+        <label class="doctor-txt-2">Zoopsychologhist</label>
       </div>
     </div>
+  </div>
 </template>
 
 <style scoped>
@@ -53,12 +58,18 @@ import Avatar04 from '@/assets/images/2151107363.jpg'
 }
 
 .doctor-card {
-  width: 20%;
-  height: 450px;
+  width: 10%;
+  height: 350px;
   background-color: transparent;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  transition: all 1s ease-in-out;
+}
+
+.doctor-card.yes{
+  width: 20%;
+  height: 450px;
 }
 
 .doctor-card img {
@@ -78,7 +89,7 @@ import Avatar04 from '@/assets/images/2151107363.jpg'
   color: rgb(126, 126, 126);
 }
 
-.animal-txt-1 {
+.doctor-txt-3 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: rgb(0, 0, 0);
   font-weight: bold;
@@ -86,6 +97,13 @@ import Avatar04 from '@/assets/images/2151107363.jpg'
   font-size: 30px;
   text-transform: uppercase;
   padding-left: 2%;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s ease-in-out;
 }
 
+.doctor-txt-3.yes{
+opacity: 1;
+transform: translateX(0);
+}
 </style>

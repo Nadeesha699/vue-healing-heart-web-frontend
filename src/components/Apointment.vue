@@ -1,28 +1,33 @@
 <script setup>
-import Animal01 from '@/assets/images/dog.png';
-import Animal02 from '@/assets/images/cat.png';
-import Animal03 from '@/assets/images/rabbit.png';
-import Animal04 from '@/assets/images/cockatoo.png';
-import Animal05 from '@/assets/images/rat.png';
-import Animal06 from '@/assets/images/cow.png';
-import Add from '@/assets/images/add.png';
+import Animal01 from "@/assets/images/dog.png";
+import Animal02 from "@/assets/images/cat.png";
+import Animal03 from "@/assets/images/rabbit.png";
+import Animal04 from "@/assets/images/cockatoo.png";
+import Animal05 from "@/assets/images/rat.png";
+import Animal06 from "@/assets/images/cow.png";
+import Add from "@/assets/images/add.png";
+import { onMounted } from "vue";
+import { observeElements } from "@/js/intersectionObserver";
+onMounted(() => {
+  observeElements();
+});
 </script>
 
 <template>
   <div class="appointment-container">
-    <label class="appointment-txt-1">Make an appointment</label>
+    <label class="appointment-txt-1 test">Make an appointment</label>
     <div class="appointment-div-1">
       <div class="appointment-div-2">
-        <div class="appointment-div-3">
+        <div class="appointment-div-3 test">
           <label class="appointment-txt-2">Your Name</label>
           <input />
         </div>
-        <div class="appointment-div-3">
+        <div class="appointment-div-3 test">
           <label class="appointment-txt-2">Your phone</label>
           <input />
         </div>
       </div>
-      <div>
+      <div class="appointment-div-5 test">
         <label class="appointment-txt-2">Your Pet</label>
         <div class="appointment-div-2">
           <div class="appointment-card">
@@ -70,14 +75,14 @@ import Add from '@/assets/images/add.png';
         </div>
       </div>
       <div class="appointment-div-2">
-        <div class="appointment-div-3">
+        <div class="appointment-div-3 test">
           <label class="appointment-txt-2">Date</label><input type="date" />
         </div>
-        <div class="appointment-div-3">
+        <div class="appointment-div-3 test">
           <label class="appointment-txt-2">Time</label><input type="time" />
         </div>
       </div>
-      <button>select a doctor</button>
+      <button class="test">select a doctor</button>
     </div>
   </div>
 </template>
@@ -88,7 +93,7 @@ import Add from '@/assets/images/add.png';
   flex-direction: column;
   justify-content: space-around;
   padding: 2%;
-  background-color:white
+  background-color: white;
 }
 
 .appointment-div-1 {
@@ -98,6 +103,17 @@ import Add from '@/assets/images/add.png';
   justify-content: center;
   justify-content: space-around;
   gap: 20px;
+}
+
+.appointment-div-5{
+  opacity: 0;
+  transform: translateX(-200px);
+  transition: all 1s ease-in-out;
+}
+
+.appointment-div-5.yes{
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .appointment-div-2 {
@@ -111,6 +127,12 @@ import Add from '@/assets/images/add.png';
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.appointment-div-3.yes{
+  opacity: 1;
 }
 
 .appointment-div-3 input {
@@ -159,14 +181,27 @@ import Add from '@/assets/images/add.png';
   font-weight: bold;
   color: white;
   letter-spacing: 2px;
+  opacity: 0;
+  transition: all 1.5s ease-in-out;
+}
+
+.appointment-div-1 button.yes{
+  opacity: 1;
 }
 
 .appointment-txt-1 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 10px;
   font-size: 30px;
   text-transform: uppercase;
+  transition: all 1s ease-in-out;
+  opacity: 0;
+}
+
+.appointment-txt-1.yes{
+  opacity: 1;
+  letter-spacing: 2px;
 }
 
 .appointment-txt-2 {

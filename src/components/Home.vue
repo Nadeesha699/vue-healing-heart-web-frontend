@@ -1,6 +1,23 @@
 <script setup>
 import Icon from "@/assets/images/arrow-circle-right.png";
 import Logo from "@/assets/images/heartworm.png";
+import { onMounted } from "vue";
+onMounted(() => {
+  const elements = document.querySelectorAll(".test");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("yes");
+        } else {
+          entry.target.classList.remove("yes");
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+  elements.forEach((el) => observer.observe(el));
+});
 </script>
 
 <template>
@@ -8,33 +25,33 @@ import Logo from "@/assets/images/heartworm.png";
     <div class="home-div-2">
       <div class="home-div-3">
         <div class="home-div-8">
-          <div class="home-div-6">
+          <div class="home-div-6 test">
             <img alt="icon" :src="Logo" class="home-img-2" />
             <h1 class="home-txt-4">Healing Hearts</h1>
           </div>
-          <div class="home-div-7">
+          <div class="home-div-7 test">
             <a href="/" class="home-a-1">About</a>
             <a href="#service" class="home-a-1">Service</a>
             <a href="#testimonials" class="home-a-1">Testimonials</a>
             <a href="#doctor" class="home-a-1">Doctors</a>
           </div>
         </div>
-        <label class="home-txt-3">+94 711764232</label>
+        <label class="home-txt-3 test">+94 711764232</label>
       </div>
       <div class="home-div-4">
-        <label class="home-txt-1">
+        <label class="home-txt-1 test">
           Loving care for your furry family members
         </label>
         <div class="home-div-5">
-          <div class="home-card-1">
+          <div class="home-card-1 test">
             <label class="home-txt-2">Make an appointment</label>
-            <div class="home-div-6">
+            <div class="home-div-9">
               <img alt="icon" :src="Icon" class="home-img-1" />
             </div>
           </div>
-          <div class="home-card-1">
+          <div class="home-card-1 test">
             <label class="home-txt-2">Call a doctor at home</label>
-            <div class="home-div-6">
+            <div class="home-div-9">
               <img alt="icon" :src="Icon" class="home-img-1" />
             </div>
           </div>
@@ -42,7 +59,7 @@ import Logo from "@/assets/images/heartworm.png";
       </div>
     </div>
     <div class="home-div-1">
-      <div>
+      <div class="test">
         <label class="home-txt-5"
           >20<span class="home-txt-6">years</span></label
         >
@@ -51,7 +68,7 @@ import Logo from "@/assets/images/heartworm.png";
           is the clinic's history, saving animals since 2003
         </p>
       </div>
-      <div>
+      <div class="test">
         <label class="home-txt-5"
           >3,000<span class="home-txt-6">per year</span></label
         >
@@ -60,14 +77,14 @@ import Logo from "@/assets/images/heartworm.png";
           the annual number of vaccinations given to the pets
         </p>
       </div>
-      <div>
+      <div class="test">
         <label class="home-txt-5">$50,000</label>
         <hr />
         <p class="home-txt-7">
           inveted in state-of-the-art equipment in the last 3 years
         </p>
       </div>
-      <div>
+      <div class="test">
         <label class="home-txt-5"
           >6,500<span class="home-txt-6">animals</span></label
         >
@@ -97,6 +114,17 @@ import Logo from "@/assets/images/heartworm.png";
   padding-right: 2%;
   justify-content: center;
   align-items: center;
+}
+
+.home-div-1 div {
+  transform: translateX(-100px);
+  transition: all 1s ease-in-out;
+  opacity: 0;
+}
+
+.home-div-1 div.yes {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .home-div-2 {
@@ -135,6 +163,14 @@ import Logo from "@/assets/images/heartworm.png";
   letter-spacing: 2px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
+  transform: translateY(200px);
+  transition: all 1.4s ease-in-out;
+  opacity: 0;
+}
+
+.home-txt-1.yes {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .home-card-1 {
@@ -148,6 +184,14 @@ import Logo from "@/assets/images/heartworm.png";
   justify-content: space-around;
   padding-left: 2%;
   padding-right: 2%;
+  transform: translateY(200px);
+  transition: all 1s ease-in-out;
+  opacity: 0;
+}
+
+.home-card-1.yes {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .home-txt-2 {
@@ -165,7 +209,7 @@ import Logo from "@/assets/images/heartworm.png";
   height: 50px;
 }
 
-.home-div-6 {
+.home-div-9 {
   text-align: right;
   width: 100%;
 }
@@ -186,6 +230,14 @@ import Logo from "@/assets/images/heartworm.png";
   padding: 0.5%;
   font-size: 15px;
   font-weight: bold;
+  transform: translateX(-200px);
+  transition: all 1s ease-in-out;
+  opacity: 0;
+}
+
+.home-txt-3.yes {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .home-txt-4 {
@@ -200,12 +252,28 @@ import Logo from "@/assets/images/heartworm.png";
   flex-direction: row;
   align-items: center;
   gap: 20px;
+  transform: translateY(-50px);
+  transition: all 1.4s ease-in-out;
+  opacity: 0;
+}
+
+.home-div-6.yes {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .home-div-7 {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  transform: translateX(-50px);
+  transition: all 1s ease-in-out;
+  opacity: 0;
+}
+
+.home-div-7.yes {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .home-a-1 {
