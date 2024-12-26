@@ -6,6 +6,7 @@ import Testimonials from "./components/Testimonials.vue";
 import Apointment from "./components/Apointment.vue";
 import Contact from "./components/Contact.vue";
 import Service from "./components/Service.vue";
+import Check from "./Test/Check.vue";
 </script>
 
 <template>
@@ -16,4 +17,5 @@ import Service from "./components/Service.vue";
   <Testimonials />
   <Apointment/>
   <Contact/>  
+  <!-- <Check/>  -->
 </template>

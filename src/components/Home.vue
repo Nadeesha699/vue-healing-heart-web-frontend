@@ -2,24 +2,13 @@
 import Icon from "@/assets/images/arrow-circle-right.png";
 import Logo from "@/assets/images/heartworm.png";
 
-import { onMounted } from "vue";
-onMounted(() => {
-  const elements = document.querySelectorAll(".test");
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("yes");
-        } else {
-          entry.target.classList.remove("yes");
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
-  elements.forEach((el) => observer.observe(el));
-});
+import { onMounted, ref } from "vue";
+import { observeElements } from "@/js/intersectionObserver";
 
+
+onMounted(async () => {
+  observeElements();
+});
 </script>
 
 <template>
