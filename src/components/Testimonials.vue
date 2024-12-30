@@ -11,7 +11,7 @@ const testimonialsData = ref([]);
 
 const loadData = async () => {
   const response = await axios.get(
-    "http://127.0.0.1:8000/view-all-customer-feedback"
+    "http://127.0.0.1:8000/api/view-all-customer-feedback"
   );
   testimonialsData.value = response.data.data;
 };
