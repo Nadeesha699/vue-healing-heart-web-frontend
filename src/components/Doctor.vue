@@ -5,13 +5,13 @@ import axios from "axios";
 
 const doctorData = ref([]);
 
-const loadData = async () => {
+const loadDoctors = async () => {
   const response = await axios.get("http://127.0.0.1:8000/api/view-all-doctors");
   doctorData.value = response.data.data;
 };
 
 onMounted(async () => {
-  await loadData();
+  await loadDoctors();
   observeElements();
 });
 </script>

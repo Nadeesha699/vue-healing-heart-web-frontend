@@ -1,21 +1,14 @@
 <script setup>
-
 import { ref } from "vue";
 import { onMounted } from "vue";
 import { observeElements } from "@/js/intersectionObserver.js";
-import axios from "axios";
+import { loadService } from "@/api/api";
 
-const serviceData = ref([]);
-
-const loadData = async () => {
-  const response = await axios.get("http://127.0.0.1:8000/api/view-all-services");
-  serviceData.value = response.data.data;
-  console.log(serviceData.value);
-};
+let loadServiceData = ref([]);
 
 onMounted(async () => {
   observeElements();
-  await loadData();
+  loadServiceData.value = await loadService();
 });
 </script>
 
@@ -24,7 +17,7 @@ onMounted(async () => {
     <label class="appointment-txt-1 test">OUR SERVICES</label>
     <div
       :class="`service-div-${item.id} test`"
-      v-for="(item, index) in serviceData"
+      v-for="(item, index) in loadServiceData"
       :key="index"
     >
       <label class="service-txt-1">0{{ item.id }}</label>
