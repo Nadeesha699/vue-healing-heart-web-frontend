@@ -31,7 +31,7 @@ onMounted(() => {
         <label>2024@Nadeesha699</label>
       </div>
       <div class="contact-div-2 test">
-        <div class="contact-div-5">
+        <div class="contact-div-9">
           <div class="contact-div-6">
             <label class="contact-txt-2">About</label>
             <label class="contact-txt-1">History</label>
