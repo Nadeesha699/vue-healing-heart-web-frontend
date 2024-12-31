@@ -7,12 +7,12 @@
 }
 
 body {
- background-image: url(../src/assets/images/background.jpg);
- background-size: cover;
- background-repeat: no-repeat; 
- background-position: center; 
- height: 100Vh;
- background-attachment: fixed;
+  background-image: url(../src/assets/images/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
 }
 
 #app {
@@ -23,17 +23,18 @@ body {
   max-width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.473);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .home-div-1 {
   background-color: white;
-  height: 30%;
   display: flex;
   flex-direction: row;
-  gap: 25px;
-  padding-left: 2%;
-  padding-right: 2%;
-  justify-content: center;
+  padding: 2%;
+  gap: 20px;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -49,36 +50,33 @@ body {
 }
 
 .home-div-2 {
-  height: 70%;
   display: flex;
   flex-direction: column;
-  padding-left: 2%;
-  padding-right: 2%;
-  justify-content: space-around;
-}
-
-.home-div-3 {
-  height: 70%;
+  padding: 1%;
+  justify-content: space-between;
+  height: 100%;
+  gap: 20px;
 }
 
 .home-div-4 {
-  height: 30%;
   display: flex;
   flex-direction: row;
-  gap: 50px;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
 }
 
 .home-div-5 {
-  width: 20%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
+  gap: 10px;
 }
 
 .home-txt-1 {
-  width: 80%;
   font-size: 55px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -97,17 +95,16 @@ body {
 .home-card-1 {
   background-color: rgba(255, 255, 255, 0.393);
   border-radius: 10%;
-  width: 120px;
-  height: 120px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
-  padding-left: 2%;
-  padding-right: 2%;
   transform: translateY(200px);
   transition: all 1s ease-in-out;
   opacity: 0;
+  height: 150px;
+  padding: 2%;
+  width: 150px;
 }
 
 .home-card-1.yes {
@@ -136,11 +133,11 @@ body {
 }
 
 .home-div-3 {
-  padding-top: 2%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  height: 100%;
 }
 
 .home-txt-3 {
@@ -148,12 +145,12 @@ body {
   color: white;
   background-color: rgba(255, 255, 255, 0.393);
   border-radius: 20px;
-  padding: 0.5%;
   font-size: 15px;
   font-weight: bold;
   transform: translateX(-200px);
   transition: all 1s ease-in-out;
   opacity: 0;
+  padding: 0.5%;
 }
 
 .home-txt-3.yes {
@@ -173,7 +170,7 @@ body {
   flex-direction: row;
   align-items: center;
   gap: 20px;
-  transform: translateY(-50px);
+  transform: translateY(-20px);
   transition: all 1.4s ease-in-out;
   opacity: 0;
 }
@@ -186,10 +183,10 @@ body {
 .home-div-7 {
   display: flex;
   flex-direction: column;
-  gap: 20px;
   transform: translateX(-50px);
   transition: all 1s ease-in-out;
   opacity: 0;
+  gap: 10px;
 }
 
 .home-div-7.yes {
@@ -207,25 +204,23 @@ body {
 .home-div-8 {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  justify-content: space-between;
+  gap: 50px;
 }
 
 .home-txt-5 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: rgb(0, 0, 0);
   letter-spacing: 2px;
   font-weight: bold;
   font-size: 50px;
 }
 
 .home-txt-6 {
-  padding-left: 10px;
   font-size: 20px;
 }
 
 .home-txt-7 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: rgb(0, 0, 0);
   font-size: 14px;
   letter-spacing: 2px;
 }
@@ -237,6 +232,9 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
+  width: 100%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .doctor-div-1 {
@@ -246,11 +244,12 @@ body {
   width: 100%;
   justify-content: space-around;
   align-items: center;
+  gap: 20px;
 }
 
 .doctor-card {
-  width: 150px;
-  height: 350px;
+  width: 50%;
+  height: 300px;
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -261,8 +260,8 @@ body {
 
 .doctor-card.yes {
   opacity: 1;
-  width: 300px;
-  height: 450px;
+  width: 100%;
+  height: 400px;
 }
 
 .doctor-card img {
@@ -595,7 +594,7 @@ body {
   transition: all 1s ease-in-out;
 }
 
-.testimonials-txt-3.yes{
+.testimonials-txt-3.yes {
   opacity: 1;
   transform: translateX(0);
 }
@@ -642,7 +641,7 @@ body {
 }
 
 .contact-div-2 {
-  width:60%;
+  width: 60%;
   align-items: flex-end;
   opacity: 0;
 }
@@ -757,13 +756,13 @@ body {
   gap: 20px;
 }
 
-.appointment-div-5{
+.appointment-div-5 {
   opacity: 0;
   transform: translateX(-200px);
   transition: all 1s ease-in-out;
 }
 
-.appointment-div-5.yes{
+.appointment-div-5.yes {
   transform: translateX(0);
   opacity: 1;
 }
@@ -783,7 +782,7 @@ body {
   transition: all 1s ease-in-out;
 }
 
-.appointment-div-3.yes{
+.appointment-div-3.yes {
   opacity: 1;
 }
 
@@ -816,8 +815,8 @@ body {
   cursor: pointer;
 }
 
-.appointment-card.yes{
-background-color: pink;
+.appointment-card.yes {
+  background-color: pink;
 }
 
 .appointment-div-4 {
@@ -841,7 +840,7 @@ background-color: pink;
   transition: all 1.5s ease-in-out;
 }
 
-.appointment-div-1 button.yes{
+.appointment-div-1 button.yes {
   opacity: 1;
 }
 
@@ -855,7 +854,7 @@ background-color: pink;
   opacity: 0;
 }
 
-.appointment-txt-1.yes{
+.appointment-txt-1.yes {
   opacity: 1;
   letter-spacing: 2px;
 }
@@ -867,7 +866,7 @@ background-color: pink;
 
 .animal-container {
   background-color: white;
-  height: 100vh;
+  height: auto;
 }
 
 .animal-txt-1 {
@@ -882,11 +881,10 @@ background-color: pink;
   opacity: 0;
 }
 
-.animal-txt-1.yes{
+.animal-txt-1.yes {
   opacity: 1;
- letter-spacing: 2px;
+  letter-spacing: 2px;
 }
-
 
 .animal-txt-2 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -909,18 +907,20 @@ background-color: pink;
   display: grid;
   grid-template-columns: repeat(2, auto);
   align-items: center;
-  height: 86%;
+  height: auto;
   padding: 2%;
-  column-gap: 2%;
-  row-gap: 6%;
+  padding-bottom: 5%;
+  gap: 2%;
 }
 
-.animal-div-2,.animal-div-3, .animal-div-4{
+.animal-div-2,
+.animal-div-3,
+.animal-div-4 {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 290px;
+  height: 300px;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
@@ -932,7 +932,7 @@ background-color: pink;
 }
 
 .animal-div-2 {
-  background-position:top;
+  background-position: top;
   background-image: url(../assets/images/2150797206.jpg);
 }
 
@@ -955,7 +955,7 @@ background-color: pink;
 
 .animal-div-5 {
   width: 100%;
-  height: 290px;
+  height: 100%;
   border-radius: 30px;
   display: flex;
   flex-direction: row;
@@ -965,7 +965,7 @@ background-color: pink;
 
 .animal-div-6,
 .animal-div-7 {
-  width: 49%;
+  width: 100%;
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -992,4 +992,236 @@ background-color: pink;
   height: 25px;
 }
 
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .testimonials-container {
+    align-items: center;
+  }
+  .testimonials-div-1 {
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 5%;
+  }
+  .testimonials-card {
+    width: 50%;
+  }
+  .doctor-container {
+    align-items: center;
+  }
+  .doctor-div-1 {
+    flex-direction: column;
+  }
+  .doctor-card {
+    align-items: center;
+    width: 40%;
+  }
 
+  .doctor-card.yes {
+    width: 50%;
+  }
+  .animal-txt-1 {
+    font-size: 20px;
+  }
+
+  .home-div-1 {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .home-div-1 div {
+    width: 50%;
+  }
+
+  .home-txt-5 {
+    font-size: 30px;
+  }
+
+  .home-div-5 {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .home-card-1 {
+    height: 80px;
+    width: 80px;
+  }
+
+  .home-txt-1 {
+    font-size: 25px;
+  }
+  .home-txt-2 {
+    font-size: 13px;
+  }
+  .home-img-1 {
+    width: 15px;
+    height: 15px;
+  }
+  .home-txt-3 {
+    font-size: 10px;
+  }
+  .home-img-2 {
+    width: 30px;
+    height: 30px;
+  }
+  .home-txt-4 {
+    font-size: 20px;
+  }
+}
+
+/* Small devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .testimonials-container {
+    align-items: center;
+  }
+  .testimonials-div-1 {
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 5%;
+  }
+  .testimonials-card {
+    width: 50%;
+  }
+  .doctor-container {
+    align-items: center;
+  }
+  .doctor-div-1 {
+    flex-direction: column;
+  }
+  .doctor-card {
+    align-items: center;
+    width: 40%;
+  }
+
+  .doctor-card.yes {
+    width: 50%;
+  }
+
+  .home-div-1 {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .home-div-1 div {
+    width: 50%;
+  }
+
+  .home-txt-5 {
+    font-size: 30px;
+  }
+
+  .home-div-5 {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .home-card-1 {
+    height: 80px;
+    width: 80px;
+  }
+  .home-txt-2 {
+    font-size: 13px;
+  }
+  .home-img-1 {
+    width: 15px;
+    height: 15px;
+  }
+  .home-txt-3 {
+    font-size: 13px;
+  }
+  .home-img-2 {
+    width: 30px;
+    height: 30px;
+  }
+  .home-txt-4 {
+    font-size: 20px;
+  }
+}
+
+/* Medium devices (small laptops, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .doctor-container {
+    align-items: center;
+  }
+  .doctor-div-1 {
+    flex-direction: column;
+  }
+  .doctor-card {
+    align-items: center;
+    width: 40%;
+  }
+
+  .doctor-card.yes {
+    width: 50%;
+  }
+
+  .home-div-1 {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .home-div-1 div {
+    width: 50%;
+  }
+
+  .home-card-1 {
+    height: 80px;
+    width: 80px;
+  }
+  .home-txt-2 {
+    font-size: 13px;
+  }
+  .home-img-1 {
+    width: 15px;
+    height: 15px;
+  }
+  .home-txt-3 {
+    font-size: 13px;
+  }
+  .home-img-2 {
+    width: 30px;
+    height: 30px;
+  }
+  .home-txt-4 {
+    font-size: 20px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .home-div-1 {
+    flex-direction: column;
+  }
+
+  .home-div-1 div {
+    width: 50%;
+  }
+
+  .home-card-1 {
+    height: 80px;
+    width: 80px;
+  }
+
+  .home-txt-2 {
+    font-size: 13px;
+  }
+  .home-img-1 {
+    width: 15px;
+    height: 15px;
+  }
+
+  .home-txt-3 {
+    font-size: 13px;
+  }
+  .home-img-2 {
+    width: 30px;
+    height: 30px;
+  }
+
+  .home-txt-4 {
+    font-size: 20px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

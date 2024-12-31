@@ -11,7 +11,7 @@ import Service from "./components/Service.vue";
 
 <template>
   <Home />
-  <Animal />
+  <Animal /> 
   <Service/>
   <Doctor />
   <Testimonials />
