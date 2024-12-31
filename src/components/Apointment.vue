@@ -108,7 +108,7 @@ const setPetType = (petName) => {
   <div class="appointment-container">
     <label class="appointment-txt-1 test">Make an appointment</label>
     <div class="appointment-div-1">
-      <div class="appointment-div-2">
+      <div class="appointment-div-7">
         <div class="appointment-div-3 test">
           <label class="appointment-txt-2">Your Name</label>
           <input v-model="appointmentForm.name" />
@@ -189,7 +189,7 @@ const setPetType = (petName) => {
           </div>
         </div>
       </div>
-      <div class="appointment-div-2">
+      <div class="appointment-div-7">
         <div class="appointment-div-3 test">
           <label class="appointment-txt-2">Date</label
           ><input type="date" v-model="appointmentForm.appointmentDate" />

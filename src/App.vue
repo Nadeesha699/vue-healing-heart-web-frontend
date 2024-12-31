@@ -10,11 +10,11 @@ import Service from "./components/Service.vue";
 </script>
 
 <template>
-  <Home />
+  <!-- <Home />
   <Animal /> 
   <Service/>
   <Doctor />
   <Testimonials />
-  <Apointment/>
+  <Apointment/> -->
   <Contact/>
 </template>
