@@ -1,6 +1,5 @@
 <script setup>
 import Icon from "@/assets/images/arrow-circle-right.png";
-import Animal01 from '@/assets/images/2150797206.jpg'
 
 import { onMounted } from "vue";
 import {observeElements} from '@/js/intersectionObserver.js'

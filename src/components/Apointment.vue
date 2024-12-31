@@ -9,16 +9,9 @@ import Add from "@/assets/images/add.png";
 
 import { onMounted, ref } from "vue";
 import { observeElements } from "@/js/intersectionObserver";
-import axios from "axios";
-import { toast } from "vue3-toastify";
 import "vue3-toastify/dist/index.css";
+import { submitAppointment,appointmentForm } from "@/api/api";
 
-import {
-  valiadteName,
-  validatePhoneNumer,
-  validateDateOrTime,
-  validatePetType,
-} from "@/js/validate";
 
 let checked = ref({
   dog: false,
@@ -29,51 +22,10 @@ let checked = ref({
   other: false,
 });
 
-let appointmentForm = ref({
-  name: "",
-  phoneNummber: "",
-  petType: "",
-  appointmentDate: "",
-  appointmentTime: "",
-});
-
 onMounted(() => {
   observeElements();
 });
 
-const submitAppointment = async () => {
-  if (
-    valiadteName(appointmentForm.value.name) === false ||
-    validatePhoneNumer(appointmentForm.value.phoneNummber) === false ||
-    validatePetType(appointmentForm.value.petType) === false ||
-    validateDateOrTime(appointmentForm.value.appointmentDate) === false ||
-    validateDateOrTime(appointmentForm.value.appointmentTime) === false
-  ) {
-    toast.error("Please fill the all feilds", {
-      autoClose: 5000,
-      theme: "colored",
-    });
-  } else {
-    await axios
-      .post("http://127.0.0.1:8000/api/add-appointment", {
-        name: appointmentForm.value.name,
-        phone_number: appointmentForm.value.phoneNummber,
-        pet_type: appointmentForm.value.petType,
-        appointment_date: appointmentForm.value.appointmentDate,
-        appointment_time: appointmentForm.value.appointmentTime,
-      })
-      .then((res) => {
-        toast.success(res.data.message, { autoClose: 5000, theme: "colored" });
-        appointmentForm = {
-          name: "",
-          phoneNummber: "",
-          petType: "",
-          appointmentDate: "",
-          appointmentTime: "",
-        };
-      });
-  }
-};
 
 const setPetType = (petName) => {
   for (const pet in checked.value) {

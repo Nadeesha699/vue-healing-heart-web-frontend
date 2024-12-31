@@ -1,14 +1,8 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import { observeElements } from "@/js/intersectionObserver.js";
-import axios from "axios";
-
-const doctorData = ref([]);
-
-const loadDoctors = async () => {
-  const response = await axios.get("http://127.0.0.1:8000/api/view-all-doctors");
-  doctorData.value = response.data.data;
-};
+import { loadDoctors } from "@/api/api";
+import { doctorData } from "@/api/api";
 
 onMounted(async () => {
   await loadDoctors();
